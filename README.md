@@ -1,6 +1,6 @@
 # Vasemaker
 
-A browser-native 3D vase generator built with pure JavaScript and WebGL. Create and customize vases in real-time using built-in browser capabilities - no plugins, downloads or external dependencies required. Optimized for Bambu Studio spiral vase printing.
+A light, browser-native 3D vase generator built with pure JavaScript and WebGL. Create and customize vases in real-time using built-in browser capabilities - no plugins, downloads or external dependencies required. Optimized for Bambu Studio spiral vase printing.
 
 ## Features
 - Fully browser-native 3D modeling and preview
