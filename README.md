@@ -1,19 +1,23 @@
 # Vasemaker
 
-An interactive 3D vase generator optimized for Bambu Studio spiral vase printing. Create, customize, and export printable vases directly in your browser.
+A browser-native 3D vase generator built with pure JavaScript and WebGL. Create and customize vases in real-time using built-in browser capabilities - no plugins, downloads or external dependencies required. Optimized for Bambu Studio spiral vase printing.
 
 ## Features
-- Real-time 3D preview
-- Spiral vase mode optimization
-- Customizable dimensions and patterns
-- STL export for 3D printing
-- Bambu Studio compatibility
+- Fully browser-native 3D modeling and preview
+- Built with vanilla JavaScript and WebGL
+- No installation or plugins needed
+- Real-time parameter customization
+- Direct STL export from browser
+- Optimized for 3D printing with spiral vase mode
 
 ## Usage
-1. Adjust vase parameters using the GUI controls
-2. Enable vase mode for 3D printing optimization
-3. Export as STL
-4. Print using Bambu Studio's spiral vase mode
+1. Open in any modern browser 
+2. Customize parameters via the built-in controls
+3. Preview in real-time 3D
+4. Export directly to STL
 
 ## Tech
-Built with Three.js for 3D visualization and generation
+Built entirely with native web technologies:
+- WebGL for 3D rendering
+- Vanilla JavaScript for geometry generation
+- Browser-native file handling
