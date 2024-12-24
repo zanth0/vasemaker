@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Artistic Vase Generator (Bambu Studio Compatible)</title>
+  <style>
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+      height: 100%;
+      background: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    #viewer { 
+      width: 100%; 
+      height: 100%; 
+    }
+    .info {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #fff;
+      font-family: monospace;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+  <div class="info">Use Vase Mode for Bambu Studio spiral vase printing</div>
+
+  <!-- Import maps (ES modules) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.156.1/examples/jsm/",
+      "lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.18.1/dist/lil-gui.esm.min.js"
+    }
+  }
+  </script>
+
+  <!-- Main entry point -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
