@@ -16,7 +16,7 @@ A light, browser-native 3D vase generator built with pure JavaScript and WebGL. 
 
 ## Usage
 1. Open in any modern browser 
-2. Customize parameters via the built-in controls
+2. Customize parameters via sliders
 3. Preview in real-time 3D
 4. Export directly to STL
 
