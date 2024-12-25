@@ -8,8 +8,6 @@ A light, browser-native 3D vase generator built with pure JavaScript and WebGL. 
 
 ## Features
 - Fully browser-native 3D modeling and preview
-- Built with vanilla JavaScript and WebGL
-- No installation or plugins needed
 - Real-time parameter customization
 - Direct STL export from browser
 - Optimized for 3D printing with spiral vase mode
