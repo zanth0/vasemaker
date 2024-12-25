@@ -21,7 +21,4 @@ A light, browser-native 3D vase generator built with pure JavaScript and WebGL. 
 4. Export directly to STL
 
 ## Tech
-Built entirely with native web technologies:
-- WebGL for 3D rendering
-- Vanilla JavaScript for geometry generation
-- Browser-native file handling
+WebGL for 3D rendering and vanilla JS for geometry generation. That's it.
