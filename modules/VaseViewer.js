@@ -16,6 +16,9 @@ import { SimplePathGenerator } from './SimplePathGenerator.js';
 
 export class VaseViewer {
   constructor() {
+
+    console.log('VaseViewer constructor called');
+    
     this.params = {
       // Basic dimensions (in inches)
       height: DEFAULT_HEIGHT_INCHES,
