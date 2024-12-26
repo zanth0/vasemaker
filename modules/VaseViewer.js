@@ -1,5 +1,3 @@
-// modules/VaseViewer.js
-
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { STLExporter } from 'three/addons/exporters/STLExporter.js';
@@ -14,6 +12,7 @@ import {
 } from './constants.js';
 
 import { VaseGeometryGenerator } from './VaseGeometryGenerator.js';
+import { SimplePathGenerator } from './SimplePathGenerator.js';
 
 export class VaseViewer {
   constructor() {
@@ -37,6 +36,9 @@ export class VaseViewer {
       smoothSpiral: false,
       xySmoothing: 200,
       bottomLayers: 3,
+
+      // Path generator toggle
+      useSimpleGenerator: false, // Add a toggle for SimplePathGenerator
 
       // Export function
       saveSTL: () => this.saveSTL(),
@@ -167,6 +169,11 @@ export class VaseViewer {
       .add(this.params, 'profileHeight', 0.1, 1, 0.05)
       .onChange(() => this.updateVase());
 
+    // Add toggle for path generator
+    gui.add(this.params, 'useSimpleGenerator')
+      .name('Use Simple Path Generator')
+      .onChange(() => this.updateVase());
+
     // Export
     gui.add(this.params, 'saveSTL').name('Export STL');
   }
@@ -180,7 +187,7 @@ export class VaseViewer {
     }
 
     // Generate geometry
-    const generator = new VaseGeometryGenerator(this.params);
+    const generator = new VaseGeometryGenerator(this.params, this.params.useSimpleGenerator);
     const geometry = generator.generateGeometry();
 
     const material = new THREE.MeshPhongMaterial({
