@@ -2,10 +2,6 @@
 import { PathGenerator } from './PathGenerator.js';
 import { SimplePathGenerator } from './SimplePathGenerator.js';
 
-// VaseGeometryGenerator.js
-import { PathGenerator } from './PathGenerator.js';
-import { SimplePathGenerator } from './SimplePathGenerator.js';
-
 export class VaseGeometryGenerator {
   constructor(params, useSimpleGenerator = false) {
     this.params = params;
