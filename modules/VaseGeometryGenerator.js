@@ -2,19 +2,24 @@
 import { PathGenerator } from './PathGenerator.js';
 import { SimplePathGenerator } from './SimplePathGenerator.js';
 
+// VaseGeometryGenerator.js
+import { PathGenerator } from './PathGenerator.js';
+import { SimplePathGenerator } from './SimplePathGenerator.js';
+
 export class VaseGeometryGenerator {
   constructor(params, useSimpleGenerator = false) {
     this.params = params;
     this.useSimpleGenerator = useSimpleGenerator;
     this.pathGenerator = useSimpleGenerator
-      ? new SimplePathGenerator(params.radius, params.height, params.turns, params.steps)
+      ? new SimplePathGenerator(params.baseRadius, params.height, params.twistRate, params.numPaths)
       : new PathGenerator(params);
   }
 
-  generateVaseGeometry() {
-    const path = this.pathGenerator.generatePath(0, 1); // Example function call, adjust as needed
-    console.log(path);
+  generateGeometry() {
+    const path = this.pathGenerator.generatePath(0, 1);
     // Convert path points to 3D geometry here
+    const geometry = new THREE.BufferGeometry().setFromPoints(path.map(p => new THREE.Vector3(p.x, p.y, p.z)));
+    return geometry;
   }
 }
 
