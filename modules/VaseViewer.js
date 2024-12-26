@@ -169,10 +169,10 @@ export class VaseViewer {
       .add(this.params, 'profileHeight', 0.1, 1, 0.05)
       .onChange(() => this.updateVase());
 
-    // Add toggle for path generator
-    gui.add(this.params, 'useSimpleGenerator')
-      .name('Use Simple Path Generator')
-      .onChange(() => this.updateVase());
+// Change this part in setupGUI()
+const pathGenToggle = gui
+  .add(this.params, 'useSimpleGenerator')
+  .name('Use Simple Generator');
 
     // Export
     gui.add(this.params, 'saveSTL').name('Export STL');
